@@ -1,3 +1,4 @@
 ### BEDDOT PORTAL - Front end
 
-##React bootstrap is used. 
+#React bootstrap is used.
+#Front-end of application 
