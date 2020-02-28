@@ -29,38 +29,29 @@ export class UnitsToApprove extends Component {
     });
   };
   render() {
-    const edit = <Tooltip id="edit_tooltip">Edit Task</Tooltip>;
+    const approve = <Tooltip id="edit_tooltip">Approve</Tooltip>;
     const remove = <Tooltip id="remove_tooltip">Remove</Tooltip>;
-    const tasks_title = [
-      'Room 209: Check off-bed status.',
-      "Room 301: Check resident is moving too much while sleep",
-      "Room 208: Check off-bed status",
-      "Room 1002: Check off-bed status",
-      'Room 209: Check heart rate high >100',
-      "Room 300: Check off-bed status"
+    const units_title = [
+      "3e:4f:5a:ef:d3:56",
+      "1e:12:0e:0f:45:f4",
+      "34:78:12:ef:74:ef"
     ];
     var tasks = [];
     var number;
-    for (var i = 0; i < tasks_title.length; i++) {
-      number = "checkbox" + i;
+    for (var i = 0; i < units_title.length; i++) {
+      //number = "checkbox" + i;
       tasks.push(
         <tr key={i}>
-          <td>
-            <Checkbox
-              number={number}
-              isChecked={i === 1 || i === 2 ? true : false}
-            />
-          </td>
-          <td>{tasks_title[i]}</td>
+          <td>{units_title[i]}</td>
           <td className="td-actions text-right">
-            <OverlayTrigger placement="top" overlay={edit}>
-              <Button bsStyle="info" simple type="button" bsSize="xs">
-                <i className="fa fa-edit" />
+            <OverlayTrigger placement="top" overlay={approve}>
+              <Button bsStyle="info" simple type="button" bsSize="s">
+                <i className="fa fa-check" />
               </Button>
             </OverlayTrigger>
 
             <OverlayTrigger placement="top" overlay={remove}>
-              <Button bsStyle="danger" simple type="button" bsSize="xs">
+              <Button bsStyle="danger" simple type="button" bsSize="s">
                 <i className="fa fa-times" />
               </Button>
             </OverlayTrigger>

@@ -276,6 +276,8 @@ const tdArray = [
   ["6", "Mason Porter", "$78,615", "Chile", "Gloucester"]
 ];
 
+const thUnit = ["MAC Address", "Unit Name", "Client Name", "Action"];
+
 //
 // //
 // // // For icons

@@ -16,11 +16,12 @@
 
 */
 import React, { Component } from "react";
-import Image from 'react-bootstrap/Image'
+//import Image from 'react-bootstrap/Image'
 import { Grid, Row, Col, Alert, Table} from "react-bootstrap";
 import { Card } from "components/Card/Card.jsx";
 import { thArray, tdArray } from "variables/Variables.jsx";
 import { UnitsToApprove } from "components/Tasks/UnitsToApprove.jsx";
+import { ApprovedUnits} from "components/Tasks/ApprovedUnits.jsx";
 
 
 
@@ -79,6 +80,17 @@ class Units extends Component {
                     <table className="table">
                       <UnitsToApprove />
                     </table>
+                  </div>
+                }
+                
+            />
+            <Card
+                //title="Approved Units"
+                content={
+                  <div className="table-full-width">
+                    
+                      <ApprovedUnits />
+                    
                   </div>
                 }
                 
