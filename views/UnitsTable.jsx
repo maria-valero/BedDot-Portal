@@ -1,3 +1,4 @@
+
 /*!
 
 =========================================================
@@ -19,12 +20,12 @@ import React, { Component } from "react";
 //import Image from 'react-bootstrap/Image'
 //import { Grid, Row, Col, Alert, Table} from "react-bootstrap";
 import { Card } from "components/Card/Card.jsx";
-import { thArray, tdArray } from "variables/Variables.jsx";
-import { UnitsToApprove } from "components/Tasks/UnitsToApprove.jsx";
-import { ApprovedUnits} from "components/Tasks/ApprovedUnits.jsx";
+//import { thArray, tdArray } from "variables/Variables.jsx";
 
 import jQuery from 'jquery'
 import 'bootstrap/dist/css/bootstrap.css'
+import All_units from "../components/Tasks/All_untis";
+import All_units2 from "../components/Tasks/All_untis2";
 global.jQuery = jQuery
 global.jquery = jQuery // jquery lowercase  was the solution
 global.$ = jQuery
@@ -35,7 +36,7 @@ let Bootstrap = require('bootstrap')
 
 
 
-class Units extends Component {
+class UnitsTable extends Component {
 
   constructor(props){
     super(props);
@@ -83,32 +84,23 @@ class Units extends Component {
         <div className="content">
 
 
-          <Card
-                title="Units waiting for approval"
-                content={
-                  <div className="table-full-width">
-                    <table className="table">
-                      <UnitsToApprove />
-                    </table>
-                  </div>
-                }
-                
-            />
+          
             <Card
-                //title="Approved Units"
+                title="Available Units"
                 content={
                   <div className="table-full-width">
                     
-                      <ApprovedUnits />
+                      <All_units2 />
                     
-                  </div>
-                }
+                   </div>
+                 }
                 
-            />
-      </div>
+             />
+           
+       </div>
       );
     //}
   }
 }
 
-export default Units;
+export default UnitsTable;

@@ -21,7 +21,7 @@ import Image from 'react-bootstrap/Image'
 import { Grid, Row, Col, Table } from "react-bootstrap";
 
 import Card from "components/Card/Card.jsx";
-import { thArray, tdArray } from "variables/Variables.jsx";
+import { thArray} from "variables/Variables.jsx";
 
 
 

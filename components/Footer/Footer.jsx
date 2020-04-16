@@ -41,10 +41,10 @@ class Footer extends Component {
           </nav>
           <p className="copyright pull-right">
             &copy; {new Date().getFullYear()}{" "}
+            Homedots. Web developed with template of&nbsp;           
             <a href="http://www.creative-tim.com?ref=lbr-footer">
-              Creative Tim
+            Creative Tim
             </a>
-            , made with love for a better web
           </p>
         </Grid>
       </footer>

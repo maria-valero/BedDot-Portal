@@ -19,12 +19,14 @@ import React, { Component } from "react";
 //import Image from 'react-bootstrap/Image'
 //import { Grid, Row, Col, Alert, Table} from "react-bootstrap";
 import { Card } from "components/Card/Card.jsx";
-import { thArray, tdArray } from "variables/Variables.jsx";
+//import { thArray, tdArray } from "variables/Variables.jsx";
 import { UnitsToApprove } from "components/Tasks/UnitsToApprove.jsx";
-import { ApprovedUnits} from "components/Tasks/ApprovedUnits.jsx";
+import { ApprovedFacilities} from "components/Tasks/ApprovedFacilities.jsx";
 
 import jQuery from 'jquery'
 import 'bootstrap/dist/css/bootstrap.css'
+//import DeleteUnits from "../components/Tasks/ApprovedRooms";
+import ApprovedFacilitties from "../components/Tasks/ApprovedFacilities";
 global.jQuery = jQuery
 global.jquery = jQuery // jquery lowercase  was the solution
 global.$ = jQuery
@@ -35,13 +37,14 @@ let Bootstrap = require('bootstrap')
 
 
 
-class Units extends Component {
+class Facilities extends Component {
 
   constructor(props){
     super(props);
     this.state={
       items:[],
       isLoaded:false,
+      id:[],  
     }
     
   }
@@ -81,34 +84,21 @@ class Units extends Component {
       
       return (
         <div className="content">
-
-
-          <Card
-                title="Units waiting for approval"
-                content={
-                  <div className="table-full-width">
-                    <table className="table">
-                      <UnitsToApprove />
-                    </table>
-                  </div>
-                }
-                
-            />
             <Card
                 //title="Approved Units"
                 content={
                   <div className="table-full-width">
                     
-                      <ApprovedUnits />
+                      <ApprovedFacilitties />
                     
                   </div>
                 }
                 
-            />
+            />          
       </div>
       );
     //}
   }
 }
 
-export default Units;
+export default Facilities;

@@ -16,14 +16,18 @@
 
 */
 import Dashboard from "views/Dashboard.jsx";
-import UserProfile from "views/UserProfile.jsx";
+import UserSystem from "views/UserSystem.jsx";
 import TableList from "views/TableList.jsx";
 import Typography from "views/Typography.jsx";
 import Icons from "views/Icons.jsx";
 import Maps from "views/Maps.jsx";
 import Notifications from "views/Notifications.jsx";
 import Upgrade from "views/Upgrade.jsx";
-import Units from "./views/Units";
+//import Units from "./views/Units";
+import UnitsTable from "./views/UnitsTable";
+import Facilities from "./views/Facilities";
+import SecurityProfile from "./views/SecurityProfile";
+import Rooms from "./views/Rooms";
 
 const dashboardRoutes = [
   {
@@ -34,31 +38,80 @@ const dashboardRoutes = [
     layout: "/admin"
   },
   {
-    path: "/user",
-    name: "Configuration",
-    icon: "pe-7s-user",
-    component: UserProfile,
+    path: "/Facilities",
+    name: "Main Configuration",
+    //icon: "pe-7s-bell",
+    component: Facilities,
+    layout: "/admin"
+  },
+  {
+    path: "/Facilities",
+    name: "Facilities",
+    icon: "pe-7s-home",
+    component: Facilities,
+    layout: "/admin"
+  },
+  {
+    path: "/Rooms",
+    name: "Rooms",
+    icon: "pe-7s-note",
+    component: Rooms,
     layout: "/admin"
   },
   {
     path: "/Units",
     name: "Units",
     icon: "pe-7s-photo-gallery",
-    component: Units,
+    component: UnitsTable,
     layout: "/admin"
   },
   {
-    path: "/table",
+    path: "/Beds",
     name: "Beds Dashboard",
     icon: "pe-7s-note2",
     component: TableList,
     layout: "/admin"
   },
   {
-    path: "/typography",
+    path: "/user",
+    name: "Security Configuration",
+    //icon: "pe-7s-bell",
+    component: UserSystem,
+    layout: "/admin"
+  },
+  {
+    path: "/user",
+    name: "New User",
+    icon: "pe-7s-add-user",
+    component: UserSystem,
+    layout: "/admin"
+  },
+  {
+    path: "/securityprofile",
+    name: "Users Profiles",
+    icon: "pe-7s-lock",
+    component: SecurityProfile,
+    layout: "/admin"
+  },  
+  {
+    path: "/VisionDot",
+    name: "Other Applications",
+    //icon: "pe-7s-bell",
+    component: Typography,
+    layout: "/admin"
+  },
+  {
+    path: "/VisionDot",
     name: "VisionDot",
     icon: "pe-7s-news-paper",
     component: Typography,
+    layout: "/admin"
+  },
+  {
+    path: "/icons",
+    name: "Extras",
+    //icon: "pe-7s-bell",
+    component: Icons,
     layout: "/admin"
   },
   {
@@ -81,15 +134,9 @@ const dashboardRoutes = [
     icon: "pe-7s-bell",
     component: Notifications,
     layout: "/admin"
-  },
-  {
-    upgrade: true,
-    path: "/upgrade",
-    name: "Upgrade to PRO",
-    icon: "pe-7s-rocket",
-    component: Upgrade,
-    layout: "/admin"
   }
+  
+  
 ];
 
 export default dashboardRoutes;
