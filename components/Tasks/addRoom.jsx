@@ -19,7 +19,9 @@ export class AddRoom extends Component {
     //****COMPONENTS FUNCTIONS */
     componentDidMount(){    
        this.getWifi();  
-       this.getCarrier();     
+       this.getCarrier();    
+       document.getElementById("nroemails").value=0;
+       document.getElementById("nrophones").value=0; 
     }
 
     changeSelect = (event) => {   
@@ -33,7 +35,7 @@ export class AddRoom extends Component {
             idselected:value
             
         });
-        console.log(value)
+        //console.log(value)
         
       };
 
@@ -65,7 +67,7 @@ export class AddRoom extends Component {
             carriers:json.result, 
             isLoaded:true,   
         })      
-        console.log(this.state.carriers);
+        //console.log(this.state.carriers);
         })    
     }
 
@@ -271,8 +273,11 @@ export class AddRoom extends Component {
             </div>
             </Row>
             <input id="nroemails" key="nroemails" style={{visibility: 'hidden'}} defaultValue="0"></input>
-            <input id="nrophones" key="nrophones" style={{visibility: 'hidden'}} defaultValue="0"></input>            
+            <input id="nrophones" key="nrophones" style={{visibility: 'hidden'}} defaultValue="0"></input>   
+
+                    
             </div>
+            
         )
     }
 }
